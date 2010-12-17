@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>VIM: usr_24</title>
+<link rel="stylesheet" href="vim-stylesheet.css" type="text/css">
+</head>
+<body>
+<h2>USR_24</h2>
+<pre>
+<b class="vimtag">*<a name="usr_24.txt">usr_24.txt</a>*</b>    For Vim version 6.2.            ×îºóÐÞ¸ÄÊ±¼ä: 2001Äê9ÔÂ27ÈÕ
+
+                     VIM ÓÃ»§ÊÖ²á - Bram Moolenaar Öø
+                  (ÒëÕß£º Chimin Yen http://vimcdoc.sf.net )
+
+                              ¿ìËÙ²åÈë
+
+
+ÊäÈëÎÄ±¾Ê±£¬Vim Ìá¹©Äã¸÷ÖÖ¸÷ÑùµÄ·½·¨À´¼õÉÙ¼ü»÷´ÎÊýºÍ±ÜÃâ´ò×Ö´íÎó¡£Äã¿ÉÒÔÀûÓÃ
+²åÈëÄ£Ê½ÏÂµÄ²¹È«¹¦ÄÜÀ´ÖØ¸´ÏÈÇ°´ò¹ýµÄµ¥´Ê¡£Ò²¿ÉÒÔ°Ñ³¤´ÊËõÐ´³É¶Ì´Ê¡£ÉõÖÁ¿ÉÒÔ´ò
+³öÄã¼üÅÌÉÏÃ»ÓÐµÄ×Ö·û¡£
+
+|<a href="usr_24.html#24.1">24.1</a>|  ¸üÕý
+|<a href="usr_24.html#24.2">24.2</a>|  ÏÔÊ¾Æ¥Åä
+|<a href="usr_24.html#24.3">24.3</a>|  ²¹È«
+|<a href="usr_24.html#24.4">24.4</a>|  ÖØ¸´Ò»´Î²åÈë
+|<a href="usr_24.html#24.5">24.5</a>|  ´ÓÁíÒ»ÐÐ¿½±´
+|<a href="usr_24.html#24.6">24.6</a>|  ²åÈëÒ»¸ö¼Ä´æÆ÷ÄÚÈÝ
+|<a href="usr_24.html#24.7">24.7</a>|  ËõÐ´
+|<a href="usr_24.html#24.8">24.8</a>|  ²åÈëÌØÊâ×Ö·û
+|<a href="usr_24.html#24.9">24.9</a>|  ¶þÔª×ÖÄ¸
+|<a href="usr_24.html#24.10">24.10</a>| ÆÕÍ¨Ä£Ê½ÃüÁî
+
+       ÏÂÒ»ÕÂ: |<a href="usr_25.html#usr_25.txt">usr_25.txt</a>|  ±à¼­ÒÑ¾­±àÅÅ¹ýµÄÎÄ±¾
+       Ç°Ò»ÕÂ: |<a href="usr_23.html#usr_23.txt">usr_23.txt</a>|  ±à¼­ÌØÊâÎÄ¼þ
+         Ä¿Â¼: |<a href="usr_toc.html#usr_toc.txt">usr_toc.txt</a>|
+
+</pre><hr><pre><b class="vimtag">*<a name="24.1">24.1</a>*</b>  ¸üÕý
+
+ÍË¸ñ¼ü <code class="special">&lt;BS&gt;</code> ÒÑ¾­ÔÚÇ°ÃæÌá¹ýÁË¡£ËüÉ¾³ýÎ»ÓÚ¹â±êÇ°Ò»¸ñµÄ×Ö·û¡£¶øÉ¾³ý¼ü <code class="special">&lt;Del&gt;</code>
+ÔòÉ¾³ý¹â±êÏÂ(»òÕßËµ¹â±êºóÒ²¿ÉÒÔ)µÄÄÇ¸ö×Ö·û¡£
+   µ±Äã°ÑÕû¸ö´Ê¶¼´ò´íÁËµÄÊ±ºò£¬ÓÃ <code class="keystroke">CTRL-W</code> À´¸üÕý:
+
+<code class="section">        The horse had fallen to the sky </code>
+                                       <code class="keystroke">CTRL-W</code>
+<code class="section">        The horse had fallen to the </code>
+
+Èç¹ûÄã°ÑÒ»ÐÐ×ÖÅªµÃ²»¿ÉÊÕÊ°£¬¶øÒª´ÓÍ·À´¹ýµÄ»°£¬ÓÃ <code class="keystroke">CTRL-U</code> À´É¾³ý¡£Õâ¸öÃüÁî±£ÁôÁË
+¹â±êÖ®ºóµÄÎÄ±¾£¬Ò²±£ÁôÁËÐÐÊ×µÄËõ½ø¡£ËüÖ»É¾³ýÁË×ÔµÚÒ»¸ö·Ç¿Õ×Ö·ûÖÁ¹â±êÎ»ÖÃÖ®¼äµÄ
+ÎÄ±¾¡£ÈÃ¹â±êÎ»ÓÚÏÂÒ»ÐÐÖÐ "fallen" µÄ "f" ÉÏ£¬°´ <code class="keystroke">CTRL-U</code>, ÎÄ±¾¾Í³ÉÁËÕâÑù:
+
+<code class="section">        The horse had fallen to the </code>
+                      <code class="keystroke">CTRL-U</code>
+<code class="section">        fallen to the </code>
+
+µ±Äã·¢ÏÖ¼¸¸ö´ÊÖ®Ç°ÓÐ¸ö´íÎó£¬ÄãÐèÒª°Ñ¹â±êÒÆµ½ÄÇ¶ù×÷¸üÕý¡£ÀýÈç, Äã´òÁËÕâÑùÒ»ÐÐ:
+
+<code class="section">        The horse had follen to the ground </code>
+
+ÄãÒª°Ñ "follen" ¸Ä³É "fallen"¡£ÈÃ¹â±êÁôÔÚÐÐÎ²£¬ÄãÊäÈëÕâ¸ö×Ö·û´®¾ÍÄÜ¸üÕýÄÇ´íÎó:
+<code class="example"></code>
+<code class="example">                                        <code class="special">&lt;Esc&gt;</code>4blraA</code>
+<code class="example"></code>
+       ÍÑÀë²åÈëÄ£Ê½                    <code class="special">&lt;Esc&gt;</code>
+        ÍË»Ø4¸öµ¥´Ê                          4b
+        ÒÆµ½×ÖÄ¸ "o" ÉÏ                        l
+        ÒÔ×ÖÄ¸ "a" Ìæ´ú                         ra
+        ÖØÐÂ¿ªÊ¼²åÈëÄ£Ê½                          A
+
+ÁíÒ»ÖÖ¸üÕýÕâ¸ö´íÎóµÄ·½·¨:
+<code class="example"></code>
+<code class="example">                <code class="special">&lt;C-Left&gt;</code><code class="special">&lt;C-Left&gt;</code><code class="special">&lt;C-Left&gt;</code><code class="special">&lt;C-Left&gt;</code><code class="special">&lt;Right&gt;</code><code class="special">&lt;Del&gt;</code>a<code class="special">&lt;End&gt;</code></code>
+<code class="example"></code>
+       ÍË»Ø4¸ö´Ê                    <code class="special">&lt;C-Left&gt;</code><code class="special">&lt;C-Left&gt;</code><code class="special">&lt;C-Left&gt;</code><code class="special">&lt;C-Left&gt;</code>
+        ÒÆµ½×ÖÄ¸ "o" ÉÏ                         <code class="special">&lt;Right&gt;</code>
+        É¾³ý×ÖÄ¸ "o"                                   <code class="special">&lt;Del&gt;</code>
+        ²åÈë×ÖÄ¸ "a"                                        a
+        ÒÆµ½ÐÐÎ²                                             <code class="special">&lt;End&gt;</code>
+
+ÕâÖÖ·½·¨ÈÃÄãÁôÔÚ²åÈëÄ£Ê½ÏÂ£¬ÀûÓÃÌØÊâ¼üÀ´ÒÆ¶¯¹â±ê¡£ÕâÀàËÆÓÚÄãÔÚÒ»¸ö²»·ÖÄ£Ê½µÄ±à¼­
+Æ÷ÀïËù²ÉÓÃµÄ²Ù×÷·½·¨¡£Ëü±È½ÏÈÝÒ×¼ÇÒä£¬µ«±È½Ï·ÑÊÂ (Äã±ØÐë°ÑÄãµÄÊÖ´Ó×ÖÄ¸¼üÒÆ¶¯µ½
+¹â±ê·½Ïò¼ü£¬¶øÇÒ, ²»¿´¼üÅÌÄÑÒÔ°´×¼ <code class="special">&lt;End&gt;</code> ¼ü)¡£
+   ÕâÐ©ÌØÊâ¼üÔÚÊéÐ´Ò»¸öÍ£ÁôÔÚ²åÈëÄ£Ê½ÏÂµÄÓ³ÉäÊ±·Ç³£ÓÐÓÃ¡£¶îÍâËùÐèµÄ¼üÅÌÂ¼ÈëÒ²ÊÇ
+ÖµµÃµÄ¡£
+   ÄãÔÚ²åÈëÄ£Ê½ÏÂ¿ÉÒÔÀûÓÃµÄÌØÊâ¼üÓÐÒÔÏÂÕâÐ©:
+
+        <code class="special">&lt;C-Home&gt;</code>        ÒÆµ½ÎÄ¼þÊ×
+        <code class="special">&lt;PageUp&gt;</code>        ÉÏ¾íÒ»ÆÁ
+        <code class="special">&lt;Home&gt;</code>          ÒÆµ½ÐÐÊ×
+        <code class="special">&lt;S-Left&gt;</code>        ×óÒÆÒ»¸öµ¥´Ê
+        <code class="special">&lt;C-Left&gt;</code>        ×óÒÆÒ»¸öµ¥´Ê
+        <code class="special">&lt;S-Right&gt;</code>       ÓÒÒÆÒ»¸öµ¥´Ê
+        <code class="special">&lt;C-Right&gt;</code>       ÓÒÒÆÒ»¸öµ¥´Ê
+        <code class="special">&lt;End&gt;</code>           ÒÆµ½ÐÐÎ²
+        <code class="special">&lt;PageDown&gt;</code>      ÏÂ¾íÒ»ÆÁ
+        <code class="special">&lt;C-End&gt;</code>         ÒÆµ½ÎÄ¼þÎ²
+
+»¹ÓÐºÜ¶à¼ü£¬²Î¼û |<a href="insert.html#ins-special-special">ins-special-special</a>|¡£
+
+</pre><hr><pre><b class="vimtag">*<a name="24.2">24.2</a>*</b>  ÏÔÊ¾Æ¥Åä
+
+Äã¼üÈëÒ»¸öÓÒÀ¨ºÅ ) Ê±£¬Èç¹ûÄÜÖªµÀËüÆ¥ÅäÄÄ¸ö×óÀ¨ºÅ ( »áºÜ·½±ã¡£ÒªÈÃ Vim
+×öµ½Õâµã£¬ÓÃÏÂÃæÕâ¸öÃüÁî:
+<code class="example"></code>
+<code class="example">        :set showmatch</code>
+<code class="example"></code>
+ÏÖÔÚÄã¼üÈë±ÈÈç "(example)" ÕâÑù¼¸¸ö×Ö£¬µ±Äã¼üÈëÓÒÀ¨ºÅ ) Ê±, Vim ¾Í°Ñ¹â±êÉÁµ½Æ¥ÅäµÄ
+×óÀ¨ºÅ ( ÉÏ£¬ÔÚÄÇ¶ùÍ£Áô°ëÃëÖÓ, È»ºó·µ»ØÔ­´¦¡£
+   Èç¹ûÆ¥ÅäµÄ×óÀ¨ºÅ²»´æÔÚ£¬Vim ¾ÍÃùÆðÏìÁå¡£ÕâÑùÄã¾Í»áÏëÆðÀ´Äã¿ÉÄÜÔÚÄÄ¶ùÍüÁËÒ»¸ö×ó
+À¨ºÅ£¬»ò¼üÈëÁËÌ«¶à´ÎµÄÓÒÀ¨ºÅ¡£
+   Vim Ò²»áÎª [] ºÍ <code class="special">{}</code> ÕâÑùµÄÀ¨ºÅÏÔÊ¾Æ¥Åä¡£Äã²»±ØµÈ´ý¹â±ê·µ»ØÔ­´¦²Å¼üÈëÏÂÒ»¸ö×Ö
+·û£¬Ö»ÒªÏÂÒ»¸ö×Ö·ûÒ»¼üÈë, ¹â±ê¾Í»á·µ»Ø, ¶ø²åÈë¾Í»á¸úÒÔÇ°Ò»Ñù¼ÌÐø¡£
+   Äã¿ÉÒÔÓÃ 'matchtime' Ñ¡Ïî¸Ä±ä Vim ÔÚÆ¥ÅäÀ¨ºÅÉÏÍ£ÁôµÄÊ±¼ä¡£ÀýÈç£¬ÒªÈÃ Vim µÈ´ý
+1.5Ãë:
+<code class="example"></code>
+<code class="example">        :set matchtime=15</code>
+<code class="example"></code>
+Ö¸¶¨µÄÊ±¼äÒÔ 1/10 ÃëÎªµ¥Î»¡£
+
+</pre><hr><pre><b class="vimtag">*<a name="24.3">24.3</a>*</b>  ²¹È«
+
+Vim ÄÜ×Ô¶¯²¹È«²åÈëµÄµ¥´Ê¡£Äã¼üÈëÒ»¸öµ¥´ÊµÄ¿ªÍ·²¿·Ö£¬°´ <code class="keystroke">CTRL-P</code>, Vim ¾Í»áÎªÄã²Â²â
+ÓàÏÂµÄ²¿·Ö¡£
+   ÀýÈç£¬¼Ù¶¨ÄãÕýÔÚ½¨Á¢Ò»¸ö C ³ÌÐò, ²¢Òª¼üÈëÒÔÏÂÓï¾ä:
+
+<code class="section">        total = ch_array[0] + ch_array[1] + ch_array[2]; </code>
+
+ÄãÏÈÊäÈëÏÂÃæÕâ²¿·Ö:
+
+<code class="section">        total = ch_array[0] + ch_ </code>
+
+´ËÊ±£¬ÄãÓÃÃüÁî <code class="keystroke">CTRL-P</code> ¸æËß Vim À´²¹È«Õâ¸ö´Ê¡£Vim ¾Í»áËÑË÷ÒÔ¹â±êÇ°×Ö·û´®¿ªÍ·µÄ´Ê¡£
+ÔÚÕâ¸öÀý×ÓÖÐ£¬¾ÍÊÇ "ch_"£¬Óë´Ê ch_array Æ¥Åä¡£ËùÒÔ£¬¼üÈë <code class="keystroke">CTRL-P</code> ¾Í»áµÃµ½¸øÏÂÃæµÄ
+½á¹û:
+
+<code class="section">        total = ch_array[0] + ch_array </code>
+
+ÔÙ¼üÈë¼¸¸ö×Ö·ûÊ¹Õâ¸öÓï¾ä±ä³ÉÕâÑù(½áÎ²ÊÇ¿Õ¸ñ):
+
+<code class="section">        total = ch_array[0] + ch_array[1] +  </code>
+
+Èç¹ûÄãÏÖÔÚ¼üÈë <code class="keystroke">CTRL-P</code>£¬Vim ½«ÔÙ´ÎËÑË÷ÒÔ²¹È«¹â±êÇ°µÄ´Ê¡£ÓÉÓÚ¹â±êÇ°ÊÇ¿Õ¸ñ, ËüÕÒµ½
+µÄÊÇÖ®Ç°µÄµÚÒ»¸ö´Ê£¬¼´ "ch_array"¡£ ÔÙ¼üÈë <code class="keystroke">CTRL-P</code> ¸øÄãÏÂÒ»¸öÆ¥ÅäµÄ´Ê£¬ÔÚ±¾ÀýÖÐ¾Í
+ÊÇ "total"¡£µÚÈý´Î <code class="keystroke">CTRL-P</code> ËÑÑ°¸üÇ°ÃæµÄ¡£Èç¹ûÄÇ¶ùÃ»ÆäËüµÄÁË£¬±à¼­Æ÷¾Í»áÏÝÈëÎÞ´Ê
+¿ÉÅä×´Ì¬£¬ËùÒÔËÑË÷¾Í·µ»ØÔ­´¦£¬¼´ÄÇ¸ö¿Õ¸ñ¡£µÚËÄ´Î <code class="keystroke">CTRL-P</code> µ¼ÖÂ±à¼­Æ÷ÖÜ¶ø¸´Ê¼£¬ÓÖÕÒ
+µ½ "ch_array"¡£
+
+ÍùÇ°ËÑË÷£¬ÓÃ <code class="keystroke">CTRL-N</code>¡£ÓÉÓÚÔÚÎÄ¼þ½áÎ²ËÑË÷ÓÖÈÆ»Ø¿ªÍ·£¬<code class="keystroke">CTRL-N</code> ºÍ <code class="keystroke">CTRL-P</code> ½«ÕÒµ½ÏàÍ¬
+µÄÆ¥Åä£¬µ«Ë³Ðò²»Í¬¡£ÌáÊ¾: <code class="keystroke">CTRL-N</code> ÒâÎªÏÂÒ»¸öÆ¥Åä, ¶ø <code class="keystroke">CTRL-P</code> ÒâÎªÇ°Ò»¸öÆ¥Åä¡£
+£¨ÒëÕß£ºÓ¢ÎÄ Next ÒâÎªÏÂÒ»¸ö£¬Previous ÒâÎªÇ°Ò»¸ö£©
+
+Vim ±à¼­Æ÷»á·Ç³£Å¬Á¦µÄÀ´²¹È«²»ÍêÕûµÄ´Ê¡£Ä¬ÈÏÇé¿öÏÂ£¬ËüËÑË÷ÈçÏÂÒ»Ð©µØ·½:
+
+        1.µ±Ç°ÎÄ¼þ
+        2.ÆäËü´°¿ÚÄÚµÄÎÄ¼þ
+        3.ÆäËüÔØÈëÎÄ¼þ (ÒþÐÔ»º³å)
+        4.Î´ÔØÈëÎÄ¼þ (¶èÐÔ»º³å)
+        5.±ê¼ÇÎÄ¼þ
+        6.±»µ±Ç°ÎÄ¼þÒÔ #include Óï¾ä°üº¬µÄËùÓÐÎÄ¼þ
+
+
+Ñ¡ Ïî
+
+Äã¿ÉÒÔÀûÓÃ 'complete' Ñ¡Ïî¶¨ÖÆËÑË÷Ë³Ðò¡£
+
+»¹¿ÉÒÔÊ¹ÓÃ 'ignorecase' Ñ¡Ïî¡£Éè¶¨Õâ¸öÑ¡Ïîºó£¬ËÑÑ°Æ¥ÅäÊ±´óÐ¡Ð´µÄÇø±ð¾Í»á±»ºöÂÔ¡£
+
+Ò»¸öÌØÊâµÄ²¹È«Ñ¡ÏîÊÇ 'infercase'¡£ËüµÄÓÃ´¦ÊÇÔÚÑ°ÕÒÆ¥ÅäÊ±²»¼Æ´óÐ¡Ð´ ('ignorecase'
+±ØÐëÏÈ±»Éè¶¨)£¬µ«ÈÔÈ»²ÉÓÃÒÑ¼üÈë²¿·ÖµÄ´óÐ¡Ð´×÷¡£ÕâÑù, Èç¹ûÄã¼üÈë "For" ¶øVim ÕÒµ½
+ÁËÆ¥Åä "fortunately"£¬Ëù²úÉúµÄ½á¹û½«ÊÇ "Fortunately"¡£
+
+
+²¹ È« ÌØ ¶¨ ÎÄ ±¾
+
+Èç¹ûÄãÖªµÀÄãÒªÕÒÊ²Ã´£¬ÄÇÃ´Äã¿ÉÒÔÓÃÕâÐ©ÃüÁîÀ´²¹È«Ä³ÖÖÀàÐÍµÄÎÄ±¾:
+
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-F</code>           ÎÄ¼þÃû
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-L</code>           ÕûÐÐ
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-D</code>           ºê¶¨Òå (²¢ËÑË÷Ëù°üº¬µÄÎÄ¼þ)
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-I</code>           µ±Ç°ÎÄ¼þÒÔ¼°Ëù°üº¬µÄÎÄ¼þ
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-K</code>           ´ÊµäÎÄ¼þÄÚµÄµ¥´Ê
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-T</code>           ½üÒå´Ê´ÊµäÎÄ¼þÄÚµÄµ¥´Ê
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-]</code>           ±ê¼Ç
+        <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-V</code>           Vim ÃüÁîÐÐ
+
+Ã¿¸öÃüÁîÖ®ºó£¬<code class="keystroke">CTRL-N</code> ¿ÉÒÔÓÃÀ´ËÑË÷ÏÂÒ»¸öÆ¥Åä£¬¶ø <code class="keystroke">CTRL-P</code> ÔòÓÃÓÚËÑË÷Ç°Ò»¸öÆ¥Åä¡£
+   ¹ØÓÚÃ¿¸öÃüÁîµÄÏêÏ¸ÓÃ·¨£¬²Î¼û: |<a href="insert.html#ins-completion">ins-completion</a>|¡£
+
+
+²¹ È« ÎÄ ¼þ Ãû
+
+ÎÒÃÇÒÔ <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-F</code> ÎªÀý¡£Õâ¸öÃüÁî½«ÕÒÑ°ÎÄ¼þÃû¡£ËüÔÚµ±Ç°Ä¿Â¼ÀïËÑË÷ÎÄ¼þ£¬²¢ÏÔ
+Ê¾Ã¿Ò»¸öÓë¹â±êÇ°µ¥´ÊÆ¥ÅäµÄÎÄ¼þÃû¡£
+   ÀýÈç£¬¼Ù¶¨ÄãÔÚµ±Ç°Ä¿Â¼ÀïÓÐÏÂÃæÕâÐ©ÎÄ¼þ:
+
+        main.c  sub_count.c  sub_done.c  sub_exit.c
+
+ÏÖÔÚ½øÈë²åÈëÄ£Ê½²¢¿ªÊ¼¼üÈë:
+
+<code class="section">        The exit code is in the file sub </code>
+
+¾ÍÔÚÕâµãÉÏ£¬ÄãÊäÈë <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-F</code>¡£ÏÖÔÚ, Vim Í¨¹ý²é¿´µ±Ç°Ä¿Â¼ÀïµÄÎÄ¼þÀ´²¹È«µ±Ç°
+´Ê "sub"¡£×î³õµÄÆ¥ÅäÊÇ sub_count.c¡£Õâ²»ÊÇÄãÏëÒªµÄ£¬ËùÒÔÄã°´ <code class="keystroke">CTRL-N</code> ÒÔÆ¥ÅäÏÂÒ»
+¸öÎÄ¼þ¡£Õâ´ÎÆ¥ÅäµÄÊÇ sub_done.c¡£ÔÙ¼üÈë <code class="keystroke">CTRL-N</code> ¸øÁËÄã sub_exit.c¡£½á¹û:
+
+<code class="section">        The exit code is in the file sub_exit.c </code>
+
+Èç¹ûÎÄ¼þÃûÒÔ / (Unix) »ò C:\ (MS-Windows) ¿ªÍ·£¬ÄÇÃ´Äã¾ÍÄÜËÑË÷ÎÄ¼þÏµÍ³ÏÂËùÓÐµÄ
+ÎÄ¼þ¡£ÀýÈç£¬¼üÈë "/u" È»ºó <code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-F</code>, Õâ½«Æ¥Åä "/usr" (ÕâÊÇÔÚ Unix ÉÏ):
+
+<code class="section">        the file is found in /usr/ </code>
+
+Èç¹ûÄãÏÖÔÚ°´ <code class="keystroke">CTRL-N</code>£¬Äã¾ÍÓÖ»Øµ½ "/u"¡£½ÓÊÜ "/usr/" ²¢½øÈëÏÂÒ»²ãÄ¿Â¼, ÔÙÀ´Ò»´Î
+<code class="keystroke">CTRL-X</code> <code class="keystroke">CTRL-F</code>:
+
+<code class="section">        the file is found in /usr/X11R6/ </code>
+
+µ±È»£¬Æ¥Åä½á¹ûÈ¡¾öÓÚÄãµÄÎÄ¼þÏµÍ³ÉÏÓÐÊ²Ã´ÎÄ¼þ¡£Æ¥Åä½á¹ûÒÔ×ÖÄ¸Ë³ÐòÀ´ÅÅÁÐ¡£
+
+</pre><hr><pre><b class="vimtag">*<a name="24.4">24.4</a>*</b>  ÖØ¸´Ò»´Î²åÈë
+
+Èç¹ûÄã°´ <code class="keystroke">CTRL-A</code>£¬±à¼­Æ÷¾Í°ÑÄãÉÏ´ÎÔÚ²åÈëÄ£Ê½ÏÂÊäÈëµÄÎÄ±¾ÔÙÊäÈëÒ»´Î¡£
+   ±ÈÈç£¬¼Ù¶¨ÄãÓÐ¸öÎÄ¼þ£¬¿ªÍ·ÊÇÕâÑùµÄ:
+
+<code class="section">        "file.h" </code>
+        /<b class="vimtag">*<a name=" Main program begins "> Main program begins </a>*</b><code class="section">/ </code>
+
+ÄãÔÚµÚÒ»ÐÐ¿ªÊ¼´¦²åÈë "#include ":
+
+<code class="section">        #include "file.h" </code>
+        /<b class="vimtag">*<a name=" Main program begins "> Main program begins </a>*</b><code class="section">/ </code>
+
+ÄãÔÙÓÃÃüÁî "j^" ÍùÏÂÀ´µ½ÏÂÒ»ÐÐµÄ¿ªÊ¼´¦¡£ÏÖÔÚÄã¿ªÊ¼²åÈëÒ»¸öÐÂµÄ "#include" ÐÐ¡£
+ËùÒÔÄã¼üÈë:
+<code class="example"></code>
+<code class="example">        i <code class="keystroke">CTRL-A</code></code>
+<code class="example"></code>
+½á¹û¾ÍÏñÏÂÃæÕâÑù:
+
+<code class="section">        #include "file.h" </code>
+        #include /<b class="vimtag">*<a name=" Main program begins "> Main program begins </a>*</b><code class="section">/ </code>
+
+"#include " ±»²åÈëÊÇÒòÎª <code class="keystroke">CTRL-A</code> »á²åÈëÉÏ´Î²åÈë¹ýµÄÎÄ±¾¡£ÏÖÔÚÄã¼üÈë "main.h"
+<code class="special">&lt;Enter&gt;</code> ÒÔ½áÊøÕâÒ»ÐÐ:
+
+
+<code class="section">        #include "file.h" </code>
+<code class="section">        #include "main.h" </code>
+        /<b class="vimtag">*<a name=" Main program begins "> Main program begins </a>*</b><code class="section">/ </code>
+
+<code class="keystroke">CTRL-@</code> ÃüÁî»áÍê³É <code class="keystroke">CTRL-A</code> µÄ²Ù×÷ºóÍË³ö²åÈëÄ£Ê½¡£ÕâÊÇÒ»¸ö¿ìËÙÖØ¸´²åÈëÒ»Ä£Ò»ÑùµÄ
+ÎÄ±¾µÄÒ»¸ö·½·¨¡£
+
+</pre><hr><pre><b class="vimtag">*<a name="24.5">24.5</a>*</b>  ´ÓÁíÒ»ÐÐ¿½±´
+
+<code class="keystroke">CTRL-Y</code> ÃüÁî²åÈë¹â±êÉÏ·½µÄ×Ö·û¡£µ±Äã¸´ÖÆÇ°Ò»ÐÐÎÄ±¾µÄÊ±ºò£¬Õâ¸öÃüÁîºÜÓÐÓÃ¡£ÀýÈç£¬
+ÄãÓÐÕâÃ´Ò»ÐÐ C ´úÂë:
+
+<code class="section">        b_array[i]-&gt;s_next = a_array[i]-&gt;s_next; </code>
+
+ÏÖÔÚÄãÐèÒª°ÑÕâÒ»ÐÐÔÙ¼üÈëÒ»´Î£¬²¢ÒÔ "s_prev" È¡´ú "s_next"¡£»»ÐÐÒÔºó, °´14´Î
+<code class="keystroke">CTRL-Y</code>£¬Ö±µ½¹â±êÎ»ÓÚ "next" µÄ "n" ÉÏ:
+
+<code class="section">        b_array[i]-&gt;s_next = a_array[i]-&gt;s_next;</code>
+<code class="section">        b_array[i]-&gt;s_ </code>
+
+ÏÖÔÚÄã¼üÈë "prev":
+
+<code class="section">        b_array[i]-&gt;s_next = a_array[i]-&gt;s_next; </code>
+<code class="section">        b_array[i]-&gt;s_prev </code>
+
+¼ÌÐø°´ <code class="keystroke">CTRL-Y</code> Ö±µ½ÏÂÒ»¸ö "next":
+
+<code class="section">        b_array[i]-&gt;s_next = a_array[i]-&gt;s_next;</code>
+<code class="section">        b_array[i]-&gt;s_prev = a_array[i]-&gt;s_ </code>
+
+ÏÖÔÚ¼üÈë "prev;" ÒÔ½áÊøÕâÒ»ÐÐ¡£
+
+<code class="keystroke">CTRL-E</code> ÃüÁî²Ù×÷ÆðÀ´¸ú <code class="keystroke">CTRL-Y</code> Ò»Ñù£¬Ö»²»¹ýËü²åÈë¹â±êÏÂ·½µÄ×Ö·û¡£
+
+</pre><hr><pre><b class="vimtag">*<a name="24.6">24.6</a>*</b>  ²åÈëÒ»¸ö¼Ä´æÆ÷ÄÚÈÝ
+
+ÃüÁî <code class="keystroke">CTRL-R</code> <code class="special">{register}</code> ²åÈë¼Ä´æÆ÷ÀïµÄÄÚÈÝ¡£ËüµÄÓÃ´¦ÊÇÈÃÄã²»±Ø¼üÈë³¤´Ê¡£ÀýÈç£¬
+ÄãÒªÊäÈëÏÂÃæÕâÐ©:
+
+<code class="section">        r = VeryLongFunction(a) + VeryLongFunction(b) + VeryLongFunction(c) </code>
+
+Õâ¸öº¯ÊýµÄ¶¨Òå¼ûÓÚÁíÒ»¸öÎÄ¼þ¡£±à¼­ÄÇ¸öÎÄ¼þ²¢°Ñ¹â±êÒÆµ½¸Ãº¯ÊýÃûÉÏ£¬È»ºó°ÑÎÄ¼þÃû
+ÉãÈë¼Ä´æÆ÷ v:
+<code class="example"></code>
+<code class="example">        "vyiw</code>
+<code class="example"></code>
+"v Ö¸¶¨¼Ä´æÆ÷£¬"yiw" ÒâË¼ÊÇ¿½±´Ò»¸ö´Ê£¬²»º¬¿Õ¸ñ (yank-inner-word)¡£ÏÖÔÚ±à¼­ÄÇ¸ö
+Òª²åÈëÒ»ÐÐ´úÂëµÄÎÄ¼þ£¬ÏÈ¼üÈë¿ªÍ·¼¸¸ö×Ö·û:
+
+<code class="section">        r = </code>
+
+ÏÖÔÚÓÃ <code class="keystroke">CTRL-R</code> v À´²åÈëº¯ÊýÃû:
+
+<code class="section">        r = VeryLongFunction </code>
+
+Äã½ÓÏÂÀ´ÔÚº¯ÊýÃûºóÃæ¼üÈëÆäËü±ØÒª×Ö·û£¬È»ºóÔÙÓÃÁ½´Î <code class="keystroke">CTRL-R</code> v¡£
+   ÄãÒ²¿ÉÒÔÓÃ²¹È«¹¦ÄÜÀ´Íê³ÉÍ¬ÑùµÄ¹¤×÷¡£µ«µ±ÄãÓÐºÃ¼¸¸ö´Ê£¬Æä¿ªÍ·¼¸¸ö×Ö·û¶¼Ò»Ñù
+µÄÊ±ºò£¬¼Ä´æÆ÷¾ÍÓÐÓÃ¶àÁË¡£
+
+Èç¹û¼Ä´æÆ÷´æ·Å×ÅÖîÈç <code class="special">&lt;BS&gt;</code> »òÆäËüÌØÊâ×Ö·û£¬ÕâÐ©×Ö·û¾Í±»½âÊÍ³ÉºÃÏñËüÃÇ±¾À´ÊÇ´Ó¼ü
+ÅÌ¼üÈëµÄ¡£Èç¹ûÄã²»ÒªÕâÑù½âÊÍ (ÄãÈ·ÊµÒªÔÚÎÄ±¾ÖÐ²åÈë <code class="special">&lt;BS&gt;</code>)£¬ÄÇÃ´ÒªÃüÁî <code class="keystroke">CTRL-R</code>
+<code class="keystroke">CTRL-R</code> <code class="special">{register}</code>¡£
+
+</pre><hr><pre><b class="vimtag">*<a name="24.7">24.7</a>*</b>  ËõÐ´
+
+ËõÐ´ÊÇÈ¡´úÒ»¸ö³¤´ÊµÄ¶Ì´Ê¡£ÀýÈç£¬"ad" Ö¸´ú "advertisement"¡£ Vim ÈÃÄã¼üÈëËõÐ´£¬
+È»ºóÎªÄã×Ô¶¯À©Õ¹¡£
+   ÓÃÒÔÏÂÃüÁî¸æËß Vim£¬Ã¿µ±ÄãÊäÈë "ad" ¾Í°ÑËüÀ©Õ¹³É "advertisement":
+<code class="example"></code>
+<code class="example">        :iabbrev ad advertisement</code>
+<code class="example"></code>
+ÏÖÔÚ£¬µ±Äã¼üÈë "ad"£¬ÍêÕûµÄµ¥´Ê 'advertisement" ¾Í±»²åÈëÎÄ±¾¡£¼üÈëÒ»¸ö²»¿ÉÄÜ
+³ÉÎªµ¥´ÊÒ»²¿·ÖµÄ×Ö·û£¬ÀýÈçÒ»¸ö¿Õ¸ñ, ¾Í»á´¥·¢ËõÐ´¹¦ÄÜ:
+
+        ÊäÈëµÄÎÄ±¾              ¿´µ½µÄÎÄ±¾
+<code class="section">        I saw the a             I saw the a </code>
+<code class="section">        I saw the ad            I saw the ad </code>
+<code class="section">        I saw the ad<code class="special">&lt;Space&gt;</code>     I saw the advertisement<code class="special">&lt;Space&gt;</code> </code>
+
+µ±Äã½ö½ö¼üÈë "ad" Ê±£¬À©Õ¹²¢Ã»·¢Éú¡£Ëü¿ÉÒÔ±»ÄãÊäÈë³ÉÒ»¸ö²»¿ÉÀ©Õ¹µÄ´ÊÈç "add"¡£
+Vim Ö»¶ÔÄÇÐ©ÍêÕûµÄ´Ê¼ì²éËõÐ´¡£
+
+
+¶à ´Ê Ëõ Ð´
+
+Îª¼¸¸ö´Ê¶¨ÒåÒ»¸öËõÐ´Ò²ÊÇ¿ÉÄÜµÄ¡£ÀýÈç£¬ÓÃÏÂÃæÕâ¸öÃüÁî, °Ñ "JB" ¶¨Òå³É "Jack
+Benny":
+<code class="example"></code>
+<code class="example">        :iabbrev JB Jack Benny</code>
+<code class="example"></code>
+×÷Îª³ÌÐòÔ±£¬ÎÒÊ¹ÓÃÁ½¸öÏàµ±²»Ñ°³£µÄËõÐ´:
+<code class="example"></code>
+<code class="example">        :iabbrev #b /****************************************</code>
+<code class="example">        :iabbrev #e <code class="special">&lt;Space&gt;</code>****************************************/</code>
+<code class="example"></code>
+ËüÃÇÓÃÓÚÉú³É´ó¶Î×¢ÊÍ¡£×¢ÊÍÒÔËõÐ´ #b ¿ªÊ¼£¬»®³ö¶¥Ïß¡£½Ó×Å£¬ÎÒ¼üÈë×¢ÊÍÎÄ×Ö£¬×îºó
+ÒÔËõÐ´ #e »®³öµ×Ïß¡£
+   ×¢ÒâËõÐ´ #e ÒÔÒ»¸ö¿Õ¸ñ¿ªÍ·¡£»»ÑÔÖ®£¬¿ªÍ·Á½¸ö×Ö·ûÊÇ¿Õ¸ñºÍÐÇºÅ(*)¡£Í¨³£ Vim
+ºöÂÔ²»¼ÆÎ»ÓÚËõÐ´¼°ÆäÀ©Õ¹Ö®¼äµÄ¿Õ¸ñ¡£ÎªÁË±ÜÃâ¿Õ¸ñ±»ºöÂÔ£¬ÎÒ°Ñ¿Õ¸ñÒÔÆß¸ö×Ö·û±íÊ¾:
+<code class="special">&lt;, S, p, a, c, e, &gt;</code>¡£
+
+        <code class="note">Note:</code>
+        ":iabbrev" ÓÐµãÏÓ³¤¡£":iab" ×÷ÓÃÒ²Ò»Ñù¡£ËõÐ´ÃüÁî±»ËõÐ´ÁË!
+
+
+¸ü Õý ´ò ×Ö ´í Îó
+
+ÎÒÃÇ¾­³£»á·¸Í¬Ò»¸ö´ó×Ö´íÎó¡£ÀýÈç£¬°Ñ "the" ´ò³É "teh"¡£Äã¿ÉÒÔÀûÓÃËõÐ´¹¦ÄÜÀ´¸üÕý
+ÕâÑùµÄ´íÎó:
+<code class="example"></code>
+<code class="example">        :abbreviate teh the</code>
+<code class="example"></code>
+Äã¿ÉÒÔ¼ÓÉÏÒ»ÏµÁÐÕâÑùµÄËõÐ´¡£Ã¿´Î·¢ÏÖÒ»¸ö³£¼û´íÎó¾Í¼ÓÒ»¸ö¡£
+
+
+Ëõ Ð´ ÁÐ ±í
+
+":abbreviate" ÃüÁîÁÐ³öËùÓÐËõÐ´:
+
+        :abbreviate
+        i  #e             ****************************************/
+        i  #b            /****************************************
+        i  JB            Jack Benny
+        i  ad            advertisement
+        !  teh           the
+
+µÚÒ»À¸µÄ "i" ±íÃ÷²åÈëÄ£Ê½¡£ÕâÐ©ËõÐ´½ö½öÔÚ²åÈëÄ£Ê½ÏÂÓÐ×÷ÓÃ¡£ÆäËü¿ÉÄÜµÄ×Ö·û:
+
+        c       ÃüÁîÐÐÄ£Ê½                              :cabbrev
+        !       ²åÈëÄ£Ê½ºÍÃüÁîÐÐÄ£Ê½                    :abbreviate
+
+ÔÚÃüÁîÐÐÄ£Ê½ÏÂÊ¹ÓÃËõÐ´Ê¹²»³£¼ûµÄ¡£Äã»áÖ÷ÒªÔÚ²åÈëÄ£Ê½ÏÂÓÃ ":iabbrev" ÃüÁî¡£Õâ
+Ñù¾Í±ÜÃâÁË²»±ØÒªµÄÀ©Õ¹£¬ÀýÈç£¬µ±Äã¼üÈëÕâÑùÒ»ÌõÃüÁîÊ±£¬"ad" ¾Í²»»á±»À©Õ¹ÁË:
+<code class="example"></code>
+<code class="example">        :edit ad</code>
+<code class="example"></code>
+<code class="example"></code>
+É¾ ³ý Ëõ Ð´
+
+É¾³ýÒ»¸öËõÐ´£¬ÓÃ ":unabbreviate" ÃüÁî¡£¼Ù¶¨ÄãÓÐÒÔÏÂËõÐ´:
+<code class="example"></code>
+<code class="example">        :abbreviate @f fresh</code>
+<code class="example"></code>
+Äã¿ÉÒÔÓÃÕâ¸öÃüÁîÉ¾³ýËü:
+<code class="example"></code>
+<code class="example">        :unabbreviate @f</code>
+<code class="example"></code>
+µ±Äã¼üÈëÕâ¸öÃüÁîµÄÊ±ºò£¬Äã½«×¢Òâµ½ @f ±»À©Õ¹³É "fresh"¡£±ðµ£ÐÄ, Vim Ã÷°×µÃºÜÄØ
+(³ý·Çµ±ÄãÁíÓÐËõÐ´ "fresh"£¬µ«ÄÇÊÇºÜÅ¼È»µÄ)¡£
+   ÒªÉ¾³ýÈ«²¿ËõÐ´:
+<code class="example"></code>
+<code class="example">        :abclear</code>
+<code class="example"></code>
+":unabbreviate" ºÍ ":abclear" ÁíÓÐ±äÐÎ£¬ÔÚ²åÈëÄ£Ê½ÏÂÊÇ "iunabbeviate ºÍ
+":iabclear"£¬ÔÚÃüÁîÐÐÄ£Ê½ÏÂÊÇ ":cunabbreviate" ºÍ "cabclear"¡£
+
+
+Ëõ Ð´ ÔÙ Ó³ Éä
+
+¶¨ÒåËõÐ´Ê±£¬ÓÐÒ»µãÒª×¢ÒâµÄ: À©Õ¹²úÉúµÄ×Ö·û´®²»Ó¦µ±±»Ó³Éä³É±ðµÄÊ²Ã´¡£ÀýÈç:
+<code class="example"></code>
+<code class="example">        :abbreviate @a adder</code>
+<code class="example">        :imap dd disk-door</code>
+<code class="example"></code>
+ÏÖÔÚ£¬Äã¼üÈë @a, ÄãµÃµ½ "adisk-doorer"¡£ÄÇ²»ÊÇÄãÒªµÄ½á¹û¡£ÎªÁË±ÜÃâÕâÖÖÊÂ·¢Éú,
+ÓÃ ":noreabbrev" ÃüÁî¡£ËüµÄ×÷ÓÃ¸ú ":abbreviate" Ò»Ñù£¬µ«È´±ÜÃâÁËÀ©Õ¹²úÉúµÄ×Ö·û
+´®±»ÓÃÓÚÓ³Éä:
+<code class="example"></code>
+<code class="example">        :noreabbrev @a adder</code>
+<code class="example"></code>
+ÏÖÔÚºÃÁË£¬ËõÐ´À©Õ¹ºóµÄ½á¹û²»¿ÉÄÜ±»Ó³ÉäÁË¡£
+
+</pre><hr><pre><b class="vimtag">*<a name="24.8">24.8</a>*</b>  ²åÈëÌØÊâ×Ö·û
+
+<code class="keystroke">CTRL-V</code> ÃüÁîÓÃÀ´²åÈëÏÂÒ»¸ö×ÖÃæÒâÒåÉÏµÄ×Ö·û¡£»»ÑÔÖ®£¬ÎÞÂÛ¸Ã×Ö·û¶àÌØÊâ, ÆäÌØÊâº¬
+Òå¶¼±»ºöÂÔ²»¼Æ¡£ÀýÈç:
+<code class="example"></code>
+<code class="example">        <code class="keystroke">CTRL-V</code> <code class="special">&lt;Esc&gt;</code></code>
+<code class="example"></code>
+²åÈëÒ»¸ö <code class="special">&lt;Esc&gt;</code> ×Ö·û¡£¶øÄã²¢Î´ÍÑÀë²åÈëÄ£Ê½¡£(²»ÒªÔÚ <code class="keystroke">CTRL-V</code> ºóÃæ¼üÈë¿Õ¸ñ£¬ÄÇ¸ö¿Õ¸ñ
+½ö½öÎªÁË·½±ãÔÄ¶Á)¡£
+
+        <code class="note">Note:</code>
+        ÔÚ MS-Windows »·¾³ÏÂ£¬<code class="keystroke">CTRL-V</code> ÓÃÀ´Õ³ÌùÎÄ±¾¡£ÓÃ <code class="keystroke">CTRL-Q</code> ´úÌæ <code class="keystroke">CTRL-V</code>¡£Áí
+        Ò»·½Ãæ£¬ÔÚ Unix »·¾³ÏÂ£¬<code class="keystroke">CTRL-Q</code> ÔÚÄ³Ð©ÖÕ¶ËÉÏ²»Æð×÷ÓÃ£¬ÒòÆäÁíÓÐÌØÊâÒâÒå¡£
+
+ÄãÒ²¿ÉÒÔÓÃÃüÁî <code class="keystroke">CTRL-V</code> <code class="special">{digits}</code> À´²åÈëÒ»¸öÒÔÊ®½øÎ»Êý×Ö <code class="special">{digits}</code> ±íÊ¾µÄ×Ö·û¡£Àý
+Èç£¬×Ö·û±àÂë 127 ÊÇ×Ö·û <code class="special">&lt;Del&gt;</code> (µ«²¢²»Ò»¶¨ÊÇ <code class="special">&lt;Del&gt;</code> ¼ü!)¡£Òª²åÈë <code class="special">&lt;Del&gt;</code>, ¼üÈë:
+<code class="example"></code>
+<code class="example">        <code class="keystroke">CTRL-V</code> 127</code>
+<code class="example"></code>
+Äã¿ÉÒÔÓÃÕâÑùµÄ·½·¨ÊäÈëÊýÖµ²»³¬¹ý 255 µÄ×Ö·û¡£µ±Äã¼üÈëÒ»¸ö²»×ãÁ½Î»µÄÊý×ÖÊ±£¬¾ÍÒª
+Ìí¼ÓÒ»¸ö·ÇÊý×ÖµÄ×Ö·ûÀ´½áÊøÃüÁî¡£ÎªÁË»Ø±ÜÕâ¸ö·ÇÊý×Ö×Ö·ûµÄÒªÇó£¬ÔÚËüÇ°Ãæ¼ÓÒ»»ò
+Á½¸öÁãÒÔÂú×ãÈýÎ»ÊýµÄÒªÇó¡£
+   ÒÔÏÂÃüÁî¶¼²åÈëÒ»¸ö <code class="special">&lt;Tab&gt;</code> ×Ö·û£¬È»ºóÒ»¸öµã×Ö·û:
+
+        <code class="keystroke">CTRL-V</code> 9.
+        <code class="keystroke">CTRL-V</code> 09.
+        <code class="keystroke">CTRL-V</code> 009.
+
+ÊäÈëÒ»¸ö 16 ½øÖÆÊý×Ö£¬ÔÚ <code class="keystroke">CTRL-V</code> ºóÃæ, ÓÃ "x" ¿ªÍ·:
+<code class="example"></code>
+<code class="example">        <code class="keystroke">CTRL-V</code> x7f</code>
+<code class="example"></code>
+Õâ·½·¨Ò²¿ÉÒÔÓÃÀ´ÊäÈëÊýÖµ²»³¬¹ý 255 (<code class="keystroke">CTRL-V</code> xff) µÄ×Ö·û¡£Äã¿ÉÒÔÓÃ "o" ¿ªÍ·ÊäÈë
+Ò»¸öÒÔ 8 ½øÖÆÊý±íÊ¾µÄ×Ö·û£¬ÒÔ¼°ÁíÍâÁ½ÖÖ·½·¨£¬ÈÃÄãÊäÈë¶àÖÁ¶þ½øÖÆ 16 Î»ºÍ 32 Î»
+µÄÊý×Ö±íÊ¾µÄ×Ö·û (ÀýÈç£¬Unicode ×Ö·û):
+<code class="example"></code>
+<code class="example">        <code class="keystroke">CTRL-V</code> o123</code>
+<code class="example">        <code class="keystroke">CTRL-V</code> u1234</code>
+<code class="example">        <code class="keystroke">CTRL-V</code> U12345678</code>
+<code class="example"></code>
+</pre><hr><pre><b class="vimtag">*<a name="24.9">24.9</a>*</b>  ¶þÔª×ÖÄ¸
+
+ÓÐÐ©×Ö·ûÔÚ¼üÅÌÉÏÕÒ²»µ½¡£ÀýÈç£¬±íÊ¾°æÈ¨µÄ×Ö·û (©)¡£ ÒªÔÚ Vim Àï¼üÈëÕâÑùµÄ×Ö·û,
+ÄãµÃÓÃ¶þÔª×Ö·û£¬¼´ÒÔÁ½¸ö×Ö·ûÀ´±íÊ¾Ò»¸ö¡£ÀýÈç, Òª¼üÈë ©,,  Äã¾ÍµÃ°´Èý¸ö¼ü:
+<code class="example"></code>
+<code class="example">        <code class="keystroke">CTRL-K</code> Co</code>
+<code class="example"></code>
+Äã¿ÉÒÔÓÃÒÔÏÂÃüÁîÀ´²éÕÒÓÐÄÄÐ©¶þÔª×Ö·û¿É¹©ÀûÓÃ:
+<code class="example"></code>
+<code class="example">        :digraphs</code>
+<code class="example"></code>
+Vim ½«°Ñ¶þÔª×Ö·û±íÏÔÊ¾ÔÚÆÁÄ»ÉÏ¡£ÒÔÏÂ¾ÍÊÇÆäÖÐµÄÈýÐÐ:
+
+<code class="section">  AC ~_ 159  NS |  160  !I ¡  161  Ct ¢  162  Pd £  163  Cu ¤  164  Ye ¥  165 </code>
+<code class="section">  BB ¦  166  SE §  167  ': ¨  168  Co ©  169  -a ª  170  &lt;&lt; «  171  NO ¬  172 </code>
+<code class="section">  -- ­  173  Rg ®  174  'm ¯  175  DG °  176  +- ±  177  2S ²  178  3S ³  179 </code>
+
+ÕâÕÅ±í¸æËßÄã£¬±ÈÈç, Äã¼üÈë <code class="keystroke">CTRL-K</code> Pd ËùµÃµ½µÄ¶þÔª×Ö·ûÊÇ×Ö·û (£)¡£¸Ã×Ö·û±àÂëÎª
+163(Ê®½øÖÆ)¡£
+   Pd ÊÇ Pound (Ó¢°÷)µÄ¼òÐ´¡£´ó¶àÊý¶þÔª×Ö·ûÈÃÄãÒ»¿´¾Í²Âµ½Á½¸ö×Ö·ûÉú³ÉÊ²Ã´×Ö·û¡£
+Èç¹ûÄãÒ»¸ö¸ö¶ÁÏÂÀ´£¬±ã²»ÄÑÀí½âÆäÖÐµÄÂß¼­¡£
+   Äã¿ÉÒÔ½»»»Á½¸ö×Ö·ûµÄË³Ðò£¬Ö»ÒªÄÇÑù×éºÏ²»´ú±íÁíÒ»¸ö¶þÔª×Ö·û¡£ Òò´Ë <code class="keystroke">CTRL-K</code> dP
+Ò²Ã»ÎÊÌâ¡£ÓÉÓÚ "dP" ²»ÊÇ¶þÔª×Ö·û£¬Vim »á×ª¶øËÑË÷±íÊ¾³É "Pd" µÄ¶þÔª×Ö·û¡£
+
+        <code class="note">Note:</code>
+        ¶þÔª×Ö·û±íÈ¡¾öÓÚ Vim ¼Ù¶¨ÄãËùÊ¹ÓÃµÄ×Ö·û¼¯¡£ÔÚ MS-DOS ÏµÍ³ÉÏ²ÉÓÃµÄ¶þÔª
+        ×Ö·û¼¯²»Í¬ÓÚ MS-Windows ÏµÍ³ÉÏµÄ¡£Îñ±ØÓÃ ":digraphs" ÃüÁîÀ´²éÕÒµ±Ç°
+        ¿É¹©ÀûÓÃµÄ¶þÔª×Ö·û¡£
+
+Äã¿ÉÒÔ¶¨ÒåÄã×Ô¼ºµÄ¶þÔª×Ö·û¡£ÀýÈç:
+<code class="example"></code>
+<code class="example">        :digraph a" ä</code>
+<code class="example"></code>
+ÒÔÉÏÃüÁî¶¨ÒåÁË <code class="keystroke">CTRL-K</code> a" ²åÈëÒ»¸ö ä  ×Ö·û¡£ÄãÒ²¿ÉÒÔÓÃÊ®½øÖµÊýÖ¸¶¨Õâ¸ö×Ö·. ÏÂ
+ÃæÕâ¸öÃüÁî¶¨ÒåÁËÍ¬Ò»¸ö¶þÔª×Ö·û:
+<code class="example"></code>
+<code class="example">        :digraph a" 228</code>
+<code class="example"></code>
+¸ü¶à¹ØÓÚ¶þÔª×Ö·ûÐÅÏ¢²Î¼û: |<a href="digraph.html#digraphs">digraphs</a>|
+   ÁíÒ»ÖÖ²åÈëÌØÊâ×Ö·ûµÄ·½·¨ÊÇÀûÓÃ¼üÅÌÓ³Éä¡£ÏêÇé²Î¼û: |<a href="usr_45.html#45.5">45.5</a>|
+
+</pre><hr><pre><b class="vimtag">*<a name="24.10">24.10</a>*</b> ÆÕÍ¨Ä£Ê½ÃüÁî
+
+²åÈëÄ£Ê½Ìá¹©µÄÃüÁîÊýÁ¿ÓÐÏÞ¡£ÔÚÆÕÍ¨Ä£Ê½ÏÂ£¬Äã¿ÉÓÃµÄÃüÁî¾Í¶àµÃ¶àÁË¡£µ±ÄãÒªÓÃÒ»¸ö
+ÆÕÍ¨Ä£Ê½ÃüÁîÊ±£¬ÄãÍ¨³£ÓÃ <code class="special">&lt;Esc&gt;</code> ¼üÀ´ÍÑÀë²åÈëÄ£Ê½, Ö´ÐÐÕâ¸öÆÕÍ¨Ä£Ê½ÃüÁî, È»ºóÔÙ
+ÓÃ "i" »ò "a" ÃüÁîÖØÐÂ½øÈë²åÈëÄ£Ê½¡£
+   ÓÐÒ»¸ö¿ì½ÝµÄ·½·¨¡£ ÓÃ <code class="keystroke">CTRL-O</code> <code class="special">{command}</code> Äã¿ÉÒÔÔÚ²åÈëÄ£Ê½ÏÂÖ´ÐÐÈÎºÎÆÕÍ¨Ä£Ê½Ãü
+Áî¡£ÀýÈç£¬°Ñ¹â±êºóÃæÖ±ÖÁÐÐÎ²µÄÎÄ±¾É¾³ý:
+<code class="example"></code>
+<code class="example">        <code class="keystroke">CTRL-O</code> D</code>
+<code class="example"></code>
+ÓÃÕâ¸ö·½·¨£¬ÄãÖ»ÄÜÖ´ÐÐÒ»¸öÆÕÍ¨Ä£Ê½ÃüÁî¡£µ«ÊÇ, Äã¿ÉÒÔÖ¸¶¨Ò»¸ö¼Ä´æÆ÷»òÒ»¸ö´ÎÊý¡£
+Çë¿´ÏÂÃæÕâ¸ö¸ü¸´ÔÓµÄÃüÁî:
+<code class="example"></code>
+<code class="example">        <code class="keystroke">CTRL-O</code> "g3dw</code>
+<code class="example"></code>
+Õâ¸öÃüÁî°Ñ¹â±êºóÃæÈý¸öµ¥´ÊÒ»ÆðÉ¾³ý£¬´æ½øÁË¼Ä´æÆ÷ g¡£
+
+</pre><hr><pre>
+ÏÂÒ»ÕÂ: |<a href="usr_25.html#usr_25.txt">usr_25.txt</a>|  ±à¼­ÒÑ¾­±àÅÅ¹ýµÄÎÄ±¾
+
+°æÈ¨: ²Î¼û |<a href="usr_01.html#manual-copyright">manual-copyright</a>|  vim:tw=78:ts=8:ft=help:norl:
+</pre>
+<p><i>Generated by vim2html on Fri Apr 23 15:15:06 CST 2004</i></p>
+</body>
+</html>
